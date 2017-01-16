@@ -17,7 +17,7 @@ class EntUser(models.Model):
     entOrganizationCode = models.CharField(max_length=255, verbose_name='登陆企业名称')
     userpassword = models.URLField(verbose_name='登陆企业密码')
     loginTime = models.CharField(max_length=255, verbose_name='登陆时间')
-    createDate = models.DateField(blank=False, verbose_name='企业创建日期')
+    createDate = models.DateField(blank=False, verbose_name='登录用户创建时间')
 
     def __str__(self):
         return self.entName
@@ -32,7 +32,7 @@ class EntUser(models.Model):
 class EntZone(models.Model):
     # 企业所属地区 安吉 德清 长兴 吴兴 南浔 开发区
     entZoneName = models.CharField(max_length=255, verbose_name='企业地区')
-    entZoneCode = models.CharField(max_length=64, verbose_name='简称')
+    entZoneCode = models.CharField(max_length=64, verbose_name='地区简称')
 
     def __str__(self):
         return self.entZoneCode
