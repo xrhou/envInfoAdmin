@@ -15,8 +15,8 @@ class EntUser(models.Model):
     entId = models.CharField(max_length=255, verbose_name='企业组织机构代码')
     entName = models.CharField(max_length=255, verbose_name='企业名称')
     entOrganizationCode = models.CharField(max_length=255, verbose_name='登陆企业名称')
-    userpassword = models.URLField(verbose_name='登陆企业密码')
-    loginTime = models.CharField(max_length=255, verbose_name='登陆时间')
+    userpassword = models.CharField(max_length=255,verbose_name='登陆企业密码')
+    loginTime = models.DateField(max_length=255, verbose_name='登陆时间')
     createDate = models.DateField(blank=False, verbose_name='登录用户创建时间')
 
     def __str__(self):
